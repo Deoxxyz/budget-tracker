@@ -9,10 +9,11 @@ const contextReducer = (state, action) => {
         loading: false
       };
       return transactions;
+
     case 'ADD_TRANSACTION':
       transactions = {
-        ...action.payload,
-        ...state
+        data: action.payload.data,
+        loading: false
       };
       return transactions;
 
@@ -31,12 +32,10 @@ const contextReducer = (state, action) => {
       return transactions;
 
     case 'CLEAR_TRANSACTIONS':
-
       transactions = {
         ...action.payload,
         ...state
       };
-      console.log("CLEAR",transactions)
       return transactions;
 
     default:

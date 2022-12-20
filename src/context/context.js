@@ -38,8 +38,11 @@ export const Provider = ({ children }) => {
   const addTransaction = (transaction) => {
     transaction["uid"] = localStorage.getItem("uid");
     collection.doc(transaction.id).set(transaction).then(() => {
-      transactions.data = [];
-      dispatch({ type: 'ADD_TRANSACTION', payload: initialState });
+      transactions.data.push(transaction)
+      dispatch({
+        type: 'ADD_TRANSACTION',
+        payload: { data: transactions.data.filter(row => row.uid === localStorage.getItem("uid")), loading: false }
+      });
     }).catch((error) => {
       // The document probably doesn't exist.
       console.error("Error updating document: ", error);

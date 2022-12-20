@@ -10,9 +10,7 @@ const ExpenseTracker = () => {
   const classes = useStyles();
   const { balance, getTransactions, transactions } = useContext(ExpenseTrackerContext);
   useEffect(() => {
-
     getTransactions();
-
   }, [balance]);
   return (
     <Card className={classes.root}>
