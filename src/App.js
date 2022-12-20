@@ -137,7 +137,7 @@ const SpeechlyCom = ({ handleLogout }) => {
       <nav>
         <Grid container spacing={2}>
           <Grid item xs={8}>
-            <h2>Expense Tracker</h2>
+            <h2>Budget Tracker</h2>
           </Grid>
           <Grid item xs={4} style={{ display: "flex", justifyContent: "flex-end" }}>
             <h1 style={{ marginRight: "20px" }} onClick={() => setPage("table")}>Data Table</h1>

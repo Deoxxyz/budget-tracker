@@ -169,7 +169,7 @@ export default function DataTable() {
           handleSearch={handleSearch}
           clearSearch={clearSearch}
           search={search}
-          fileName={"Expense Tracker"}
+          fileName={"Budget Tracker"}
         />
         <TableContainer className={classes.container}>
           <Table stickyHeader aria-label="sticky table">
